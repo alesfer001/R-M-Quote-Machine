@@ -1,19 +1,12 @@
 $(document).ready(function(){
-  $.getJSON("js/quotes.json", function(json){
-    var html = "";
-    var totalQuoteNumber = 8;
-    var randomId = Math.floor(Math.random() * (totalQuoteNumber));
+  quoteFade();
 
-    html += "<div class='quote'>";
-    html += "<p class='quote-body'>" + json.quotes[randomId].body + "<br>";
-    html += "<span class='author'>" + json.quotes[randomId].author + "</span></p>";
-    html += "</div>";
+  $("#newquote-btn").on("click", quoteFade);
 
-    $("#quote-container").html(html);
-  });
-
-  $("#newquote-btn").on("click", function(){
+  timer = 0;
+  function quoteFade(){
     $.getJSON("js/quotes.json", function(json){
+      clearTimeout(timer);
       var html = "";
       var totalQuoteNumber = 8;
       var randomId = Math.floor(Math.random() * (totalQuoteNumber));
@@ -24,6 +17,8 @@ $(document).ready(function(){
       html += "</div>";
 
       $("#quote-container").html(html);
+      $(".quote").hide().fadeIn(2000);
+      timer = setTimeout(quoteFade, 10000);
     });
-  });
+  }
 });
