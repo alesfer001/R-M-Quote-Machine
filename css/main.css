@@ -1,0 +1,52 @@
+.logo img{
+  display: block;
+  margin: auto;
+  padding: 3%;
+}
+
+#quote-container {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  color: white;
+  text-shadow: 3px 3px black;
+  height: 250px;
+  font-size: 32px;
+  background: linear-gradient(
+      rgba(0, 0, 0, 1),
+      rgba(0, 0, 0, 0.1));
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Georgia, serif;
+  font-style: italic;
+  overflow: hidden;
+}
+
+.quote {
+  padding: 3%;
+}
+
+.author {
+  font-size: 24px;
+}
+
+.author:before {
+content: "\2014 \2009";
+}
+
+#quote-btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3%;
+}
+
+#newquote-btn{
+  font-size: 18px;
+}
+
+body {
+  background-image: url("../img/nebula.jpg");
+}
