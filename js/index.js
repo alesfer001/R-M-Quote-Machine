@@ -8,8 +8,9 @@ $(document).ready(function(){
     $.getJSON("js/quotes.json", function(json){
       clearTimeout(timer);
       var html = "";
-      var totalQuoteNumber = 8;
-      var randomId = Math.floor(Math.random() * (totalQuoteNumber));
+      var totalQuoteNumber = json.quotes.length;
+      console.log(totalQuoteNumber);
+      var randomId = Math.floor(Math.random() * totalQuoteNumber);
 
       html += "<div class='quote'>";
       html += "<p class='quote-body'>" + json.quotes[randomId].body + "<br>";
