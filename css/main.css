@@ -22,9 +22,14 @@
   filter: FlipH;
 }
 
+.mycontainer{
+  width: 70%;
+  height: 250px;
+  margin: auto;
+}
+
 #quote-container {
   z-index: 2;
-  width: 70%;
   margin: auto;
   text-align: center;
   color: white;
@@ -48,11 +53,11 @@
   padding: 2%;
 }
 
-.author {
+.quote-author {
   font-size: 24px;
 }
 
-.author:before {
+.quote-author:before {
 content: "\2014 \2009";
 }
 
@@ -81,6 +86,15 @@ content: "\2014 \2009";
 
 #newquote-btn:hover {
   background: #00b0c8;
+}
+
+.quote-tweet {
+  visibility: hidden;
+  text-align: center;
+}
+
+.twitter-share-button img {
+  height: 30px;
 }
 
 body {
