@@ -1,7 +1,13 @@
-.logo img{
+.logo img {
   display: block;
   margin: auto;
-  padding: 2%;
+  padding: 1%;
+}
+
+@media only screen and (max-width: 768px) {
+	.logo img {
+		width: 70%;
+	}
 }
 
 #Rick {
@@ -12,6 +18,14 @@
   opacity: 0.9;
 }
 
+@media only screen and (max-width: 768px) {
+	#Rick {
+    left: -35%;
+    top: 20%;
+		width: 90%;
+	}
+}
+
 #Morty {
   position: absolute;
   left: 850px;
@@ -20,6 +34,14 @@
   opacity: 0.9;
   transform: scaleX(-1);
   filter: FlipH;
+}
+
+@media only screen and (max-width: 768px) {
+	#Morty {
+    left: 45%;
+    top: 10%;
+		width: 90%;
+	}
 }
 
 .mycontainer{
@@ -49,12 +71,26 @@
   overflow: hidden;
 }
 
+@media only screen and (max-width: 768px) {
+	#quote-container {
+    text-shadow: 1px 1px black;
+    font-size: 18px;
+		border: 2px solid rgba(0, 176, 200, 0.5);
+	}
+}
+
 .quote {
-  padding: 2%;
+  padding: 1%;
 }
 
 .quote-author {
   font-size: 24px;
+}
+
+@media only screen and (max-width: 768px) {
+	.quote-author {
+    font-size: 12px;
+	}
 }
 
 .quote-author:before {
@@ -65,7 +101,7 @@ content: "\2014 \2009";
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2%;
+  padding: 1%;
 }
 
 #newquote-btn {
@@ -84,6 +120,14 @@ content: "\2014 \2009";
   border-left-style: none;
 }
 
+@media only screen and (max-width: 768px) {
+	#newquote-btn {
+    font-size: 12px;
+    margin-top: 10%;
+    border-bottom: 1px solid #5fe2fb;
+	}
+}
+
 #newquote-btn:hover {
   background: #00b0c8;
 }
@@ -95,6 +139,12 @@ content: "\2014 \2009";
 
 .twitter-share-button img {
   height: 30px;
+}
+
+@media only screen and (max-width: 768px) {
+	.twitter-share-button img {
+    height: 20px;
+	}
 }
 
 body {
